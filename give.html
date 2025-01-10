@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Give | Calvary Church</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="assets/logo.png" alt="Calvary Church Logo" class="logo">
+                <span class="church-name">Calvary Church - Rwayesu</span>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span>&#9776;</span>
+            </button>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="sermons.html">Sermons</a></li>
+                <li><a href="beliefs.html">Beliefs</a></li>
+                <li><a href="give.html">Give</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="give">
+        <h1>Support Our Ministry</h1>
+        <p>Your generosity helps us spread God’s Word and support our community.</p>
+        
+        <h2>Donation Options</h2>
+
+        <!-- Bank and Mobile Payment Information -->
+        <div class="offline-giving">
+            <h3>Bank Transfer</h3>
+            <p><strong>Account Name:</strong> Assemblies of God - Calvary Church</p>
+            <p><strong>Bank Name:</strong> Bank of Kigali</p>
+            <p><strong>Account Number:</strong> 000500008808122</p>
+
+            <h3>Mobile Money</h3>
+            <p><strong>MTN Rwanda:</strong> +250 788 520 926</p>
+            <p><strong>Airtel Money:</strong> +250 738 520 926</p>
+        </div>
+
+        <hr>
+
+        <!-- Online Payment Form -->
+        <div class="online-giving">
+            <h3>Donate Online</h3>
+            <form id="donation-form" method="POST" action="https://www.paypal.com/donate">
+                <input type="hidden" name="hosted_button_id" value="KASA96N67H9T8">
+                
+                <label for="amount">Donation Amount (USD):</label>
+                <input type="number" id="amount" name="amount" step="0.01" required>
+                
+                <button type="submit">Donate via PayPal</button>
+            </form>
+            <p>Note: You will be redirected to PayPal to complete your donation.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Assemblies of God - Calvary Church. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

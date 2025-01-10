@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Beliefs | Calvary Church</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="assets/logo.png" alt="Calvary Church Logo" class="logo">
+                <span class="church-name">Calvary Church - Rwayesu</span>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span>&#9776;</span>
+            </button>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="sermons.html">Sermons</a></li>
+                <li><a href="beliefs.html">Beliefs</a></li>
+                <li><a href="give.html">Give</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Beliefs Section -->
+    <section id="beliefs">
+        <h1>Our 16 Fundamental Beliefs</h1>
+        <p>Click on a belief to view its full description.</p>
+        <ol>
+            <li onclick="toggleDescription(1)">The Scriptures Inspired
+                <p id="desc-1" class="belief-description">The Bible is the inspired Word of God, a revelation from God to man. It is infallible and authoritative.</p>
+            </li>
+            <li onclick="toggleDescription(2)">The One True God
+                <p id="desc-2" class="belief-description">There is one true God, revealed in three persons: Father, Son, and Holy Spirit.</p>
+            </li>
+            <li onclick="toggleDescription(3)">The Deity of the Lord Jesus Christ
+                <p id="desc-3" class="belief-description">Jesus Christ is the eternal Son of God, born of a virgin, and fully divine.</p>
+            </li>
+            <li onclick="toggleDescription(4)">The Fall of Man
+                <p id="desc-4" class="belief-description">Man was created good but fell through disobedience, incurring physical and spiritual death.</p>
+            </li>
+            <li onclick="toggleDescription(5)">The Salvation of Man
+                <p id="desc-5" class="belief-description">Salvation is through repentance and faith in the atoning sacrifice of Jesus Christ.</p>
+            </li>
+            <li onclick="toggleDescription(6)">The Ordinances of the Church
+                <p id="desc-6" class="belief-description">The two ordinances are water baptism by immersion and Holy Communion.</p>
+            </li>
+            <li onclick="toggleDescription(7)">The Baptism in the Holy Spirit
+                <p id="desc-7" class="belief-description">The baptism in the Holy Spirit empowers believers for witnessing and service.</p>
+            </li>
+            <li onclick="toggleDescription(8)">The Initial Physical Evidence of the Baptism in the Holy Spirit
+                <p id="desc-8" class="belief-description">The initial evidence is speaking in tongues as experienced in Acts 2:4.</p>
+            </li>
+            <li onclick="toggleDescription(9)">Sanctification
+                <p id="desc-9" class="belief-description">Sanctification is an act of separation from evil and dedication to God.</p>
+            </li>
+            <li onclick="toggleDescription(10)">The Church and Its Mission
+                <p id="desc-10" class="belief-description">The Church is the Body of Christ and has the mission of evangelism and worship.</p>
+            </li>
+            <li onclick="toggleDescription(11)">The Ministry
+                <p id="desc-11" class="belief-description">A divinely called and scripturally ordained ministry leads the Church in worship and service.</p>
+            </li>
+            <li onclick="toggleDescription(12)">Divine Healing
+                <p id="desc-12" class="belief-description">Divine healing is provided in the atonement and is available for all believers.</p>
+            </li>
+            <li onclick="toggleDescription(13)">The Blessed Hope
+                <p id="desc-13" class="belief-description">The Blessed Hope is the rapture of the Church at Christ's coming.</p>
+            </li>
+            <li onclick="toggleDescription(14)">The Millennial Reign of Christ
+                <p id="desc-14" class="belief-description">The second coming of Christ includes the millennial reign on earth.</p>
+            </li>
+            <li onclick="toggleDescription(15)">The Final Judgment
+                <p id="desc-15" class="belief-description">The wicked will be judged and eternally punished in the lake of fire.</p>
+            </li>
+            <li onclick="toggleDescription(16)">The New Heavens and the New Earth
+                <p id="desc-16" class="belief-description">We look forward to a new heaven and earth where righteousness dwells.</p>
+            </li>
+        </ol>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Assemblies of God - Calvary Church, Rwayesu. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        function toggleDescription(id) {
+            const desc = document.getElementById(`desc-${id}`);
+            desc.classList.toggle('active');
+        }
+    </script>
+     
+    <script src="script.js"></script>
+</body>
+</html>
