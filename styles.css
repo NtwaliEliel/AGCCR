@@ -237,10 +237,12 @@ nav ul.menu a {
 }
 
 /* Events Section */
-#events {
+.events {
+    display: flex;
+    flex-wrap: wrap; /* Allow multiple cards to wrap on smaller screens */
+    gap: 1rem; /* Space between cards */
     padding: 2rem;
-    text-align: center;
-    background-color: #fff;
+    justify-content: center;
 }
 
 #events h1 {
@@ -256,32 +258,48 @@ nav ul.menu a {
     gap: 1rem;
 }
 
+/* Event Card */
 .event-card {
-    background-image: url('path-to-your-image.jpg'); /* Replace with your image path */
-    background-size: cover; /* Ensures the image covers the whole card */
-    background-position: center; /* Centers the image */
-    border-radius: 5px;
+    position: relative;
     width: 300px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.2s ease;
-    color: white; /* Ensure text is readable on the image */
+    height: 200px;
+    background-size: cover; /* Ensures the image covers the card */
+    background-position: center; /* Centers the image */
+    border-radius: 10px; /* Smooth rounded edges */
+    overflow: hidden; /* Prevents content from overflowing */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+    display: flex;
+    align-items: flex-end; /* Align text to the bottom */
+    justify-content: center; /* Center the text */
+    color: white; /* White text for contrast */
 }
 
-.event-card .event-info {
+/* Event Details */
+.event-details {
+    position: relative;
+    background: rgba(0, 0, 0, 0.6); /* Adds a semi-transparent overlay */
+    width: 100%;
     padding: 1rem;
-    background-color: rgba(0, 0, 0, 0.5); /* Optional: Add a dark overlay for better text visibility */
+    text-align: center;
+    font-size: 1rem;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
+
 .event-card h2 {
     color: #d50000;
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
 }
 
-.event-card p {
+.event-details h3 {
+    font-size: 1.5rem;
     margin: 0.5rem 0;
 }
 
+.event-details p {
+    margin: 0;
+}
 /* Responsive Styling */
 @media (min-width: 768px) {
     #events {
