@@ -249,6 +249,7 @@ nav ul.menu a {
     color: #d50000; /* Assemblies of God red */
     margin-bottom: 1rem;
     font-size: 2rem;
+    text-align: center;
 }
 
 .events-container {
@@ -269,9 +270,12 @@ nav ul.menu a {
     overflow: hidden; /* Prevents content from overflowing */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
     display: flex;
-    align-items: flex-end; /* Align text to the bottom */
+    flex-direction: column;
+    align-items: center; /* Align text to the bottom */
     justify-content: center; /* Center the text */
     color: white; /* White text for contrast */
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 /* Event Details */
