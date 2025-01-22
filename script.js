@@ -26,24 +26,36 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-/**
- * Add YouTube Playlist Dynamically (Optional Feature)
- * Loads a YouTube playlist dynamically based on playlist ID.
- */
-function loadYouTubePlaylist(playlistId) {
-    const iframe = document.createElement('iframe');
-    iframe.width = "100%";
-    iframe.height = "315";
-    iframe.src = `https://www.youtube.com/embed/videoseries?list=${playlistId}`;
-    iframe.frameBorder = "0";
-    iframe.allow = "autoplay; encrypted-media";
-    iframe.allowFullscreen = true;
+document.addEventListener("DOMContentLoaded", () => {
+    const apiKey = "AIzaSyCNxN2Fqp23-VV1ZU9Jwtop3frLsHzlfQc"; // Replace with your API key
+    const channelId = "UCOkY2T06vtI8EJywQzuKIaw"; // Replace with your channel ID
+    const apiUrl = `https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelId}&part=snippet,id&order=date&maxResults=1`;
 
-    const sermonsSection = document.querySelector("#sermons");
-    if (sermonsSection) {
-        sermonsSection.appendChild(iframe);
-    }
-}
+    fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+            if (data.items && data.items.length > 0) {
+                const latestVideoId = data.items[0].id.videoId;
+                const videoEmbed = `
+                    <iframe 
+                        width="560" 
+                        height="315" 
+                        src="https://www.youtube.com/embed/${latestVideoId}" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>`;
+                document.getElementById("latest-sermon").innerHTML = videoEmbed;
+            } else {
+                document.getElementById("latest-sermon").innerHTML = "<p>No videos found.</p>";
+            }
+        })
+        .catch(error => {
+            console.error("Error fetching latest video:", error);
+            document.getElementById("latest-sermon").innerHTML = "<p>Unable to load the latest sermon. Please try again later.</p>";
+        });
+});
 
 // Select the toggle button and the menu
 const toggleButton = document.querySelector('.menu-toggle');
