@@ -32,35 +32,50 @@
     <section id="give">
         <h1>Support Our Ministry</h1>
         <p>Your generosity helps us spread God’s Word and support our community.</p>
-        
-        <h2>Donation Options</h2>
+        <div class="give-methods">
 
-        <!-- Bank and Mobile Payment Information -->
-        <div class="offline-giving">
-            <h3>Bank Transfer</h3>
-            <p><strong>Account Name:</strong> Assemblies of God - Calvary Church</p>
-            <p><strong>Bank Name:</strong> Bank of Kigali</p>
-            <p><strong>Account Number:</strong> 000500008808122</p>
-
-            <h3>Mobile Money</h3>
-            <p><strong>MTN Rwanda:</strong> +250 788 520 926</p>
-            <p><strong>Airtel Money:</strong> +250 738 520 926</p>
-        </div>
-
-        <hr>
-
-        <!-- Online Payment Form -->
-        <div class="online-giving">
-            <h3>Donate Online</h3>
-            <form id="donation-form" method="POST" action="https://www.paypal.com/donate">
-                <input type="hidden" name="hosted_button_id" value="KASA96N67H9T8">
-                
-                <label for="amount">Donation Amount (USD):</label>
-                <input type="number" id="amount" name="amount" step="0.01" required>
-                
-                <button type="submit">Donate via PayPal</button>
-            </form>
-            <p>Note: You will be redirected to PayPal to complete your donation.</p>
+            <!-- PayPal -->
+            <div class="give-card">
+                <img src="assets/paypal.png" alt="PayPal">
+                <h3>Give via PayPal</h3>
+                <p>Donate securely with PayPal. Click the button below to proceed.</p>
+                <style>
+                    .pp-5GJPC6CNQFU4J {
+                        text-align: center;
+                        border: none;
+                        border-radius: 0.25rem;
+                        min-width: 11.625rem;
+                        padding: 0 2rem;
+                        height: 2.625rem;
+                        font-weight: bold;
+                        background-color: #FFD140;
+                        color: #000000;
+                        font-family: "Helvetica Neue", Arial, sans-serif;
+                        font-size: 1rem;
+                        line-height: 1.25rem;
+                        cursor: pointer;
+                    }
+                </style>
+                <form action="https://www.paypal.com/ncp/payment/5GJPC6CNQFU4J" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
+                    <input class="pp-5GJPC6CNQFU4J" type="submit" value="GIVE NOW" />
+                    <img src="https://www.paypalobjects.com/images/Debit_Credit.svg" alt="cards" />
+                    <section style="font-size: 0.75rem;">
+                        Powered by
+                        <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="paypal" style="height:0.875rem;vertical-align:middle;" />
+                    </section>
+                </form>
+            </div>
+ 
+            <!-- MTN MOMOPay -->
+            <div class="give-card">
+                <img src="assets/mtn.svg" alt="MTN MOMOPay">
+                <h3>Give via MTN MOMOPay</h3>
+                <div class="details">
+                    <strong>Merchant Code:</strong> 012029<br>
+                    <strong>Account Name:</strong> Eglise de Penteconte Des Assemblees des Dieu<br>
+                </div>
+                <a href="tel:*182*8*1*123456#" style="margin-top:1rem;">Dial to Pay</a>
+            </div>
         </div>
     </section>
 
@@ -79,8 +94,8 @@
             </div>
             <div class="footer-section contact">
                 <h2>Contact</h2>
-                <p>Email: info@calvarychurch.org</p>
-                <p>Phone: +250 123 456 789</p>
+                <p>Email: info@aghuye.org</p>
+                <p>Phone: +250 796 536 686</p>
                 <p>Location: Rwayesu, Huye-Rwanda</p>
             </div>
         </div>

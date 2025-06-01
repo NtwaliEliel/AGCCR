@@ -90,39 +90,17 @@ header nav {
     }
 
 /* New */
-    .header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: relative
-    }
-
-    .logo {
-        order: 1;
-    }
-
-    .church-name {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-40%);
-        text-align: center;
-    }
-
-    .hamburger-menu {
-        order: 3;
-    }
-/* 
     .logo-container {
-        flex-direction: row;
-        gap: 1rem;
+        flex-direction: column;
+        gap: 0.5rem;
     }
 
     .logo-container .church-name {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
     
-} */
 }
+
 
 
 /* Navigation */
@@ -419,6 +397,7 @@ nav ul.menu a {
     text-align: justify;
     line-height: 1.5;
     margin: 0 auto;
+    float: left;
 }
 
 @media (max-width: 768px) {
@@ -450,6 +429,61 @@ nav ul.menu a {
     display: block;
     border: none;
 }
+
+/* Beliefs Section */
+
+#beliefs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+#beliefs h1 {
+    color: #d50000;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#beliefs p {
+    font-size: 1rem;
+    text-align: justify;
+    line-height: 1.5;
+    margin: 0 auto;
+}
+
+#beliefs li {
+    font-size: 1rem;
+    text-align: justify;
+    line-height: 1.5;
+    margin: 0 auto;
+}
+
+/* Contact Section */
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+#contact h1 {
+    color: #d50000;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#contact p {
+    font-size: 1rem;
+    text-align: justify;
+    line-height: 1.5;
+    margin: 0 auto;
+}
+
+
 
 /* Footer Base Styles */
 footer {
@@ -521,5 +555,82 @@ footer {
     .footer-section {
         flex: 1 1 100%;
         margin-bottom: 1rem;
+    }
+}
+
+/* Give Section Styles */
+#give {
+    max-width: 600px;
+    margin: 2rem auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    padding: 2rem;
+    text-align: center;
+}
+
+#give h1 {
+    color: #d50000;
+    margin-bottom: 0.5rem;
+}
+
+#give h2, #give h3 {
+    color: #222;
+    margin-top: 2rem;
+}
+
+.give-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.give-card {
+    background: #f9f9f9;
+    border-radius: 10px;
+    padding: 1.5rem 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.give-card img {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 1rem;
+}
+
+.give-card button, .give-card a {
+    background: #d50000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 0.7rem 2rem;
+    font-size: 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.give-card button:hover, .give-card a:hover {
+    background: #a30000;
+}
+
+.give-card .details {
+    font-size: 1rem;
+    color: #333;
+    margin-top: 0.5rem;
+    word-break: break-all;
+}
+
+@media (max-width: 600px) {
+    #give {
+        padding: 1rem;
+    }
+    .give-methods {
+        gap: 1rem;
     }
 }
